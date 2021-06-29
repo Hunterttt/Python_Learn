@@ -1,8 +1,9 @@
 import requests
-import re
+import re,os,sys
 from bs4 import BeautifulSoup
 from fake_useragent import UserAgent
 
+os.chdir(sys.path[0]) 
 
 def get_link_list(xwords):
     header = {"User-Agent": UserAgent().random}    #伪造head的User-Agent字段，假装是从浏览器发出的请求
@@ -13,7 +14,7 @@ def get_link_list(xwords):
         i += 1
         print('第%d页'%i)
         sourse_html = 'https://share.dmhy.org/topics/list/page/{}?keyword={}'      #根据网站不同链接不同
-        sourse_html = sourse_html.format(i, xwords)    #参数ip来代替sourse_html里面的大括号
+        sourse_html = sourse_html.format(i, xwords)    #参数i来代替sourse_html里面的大括号
         response = requests.get(sourse_html, headers = header)     #headers这个参数有些教程里没有
         #print(response.text)
         homepage = BeautifulSoup(response.text, 'lxml')

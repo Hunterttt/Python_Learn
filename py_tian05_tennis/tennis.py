@@ -528,7 +528,7 @@ if __name__ == '__main__':
     list_1court.append(['','06:00~08:00','08:00~10:00','10:00~12:00','12:00~14:00','14:00~16:00','16:00~18:00'])
     get_1court()
     #print(list_1court)
-    add_list2d_to_xlsx(list_1court,32,1)
+    add_list2d_to_xlsx(list_1court,41,1)
 
 
     '''
@@ -552,7 +552,7 @@ if __name__ == '__main__':
     list_1court.append(['赤羽，河岸B面'])
     list_1court.append(['','06:00~08:00','08:00~10:00','10:00~12:00','12:00~14:00','14:00~16:00','16:00~18:00'])
     get_1court()
-    add_list2d_to_xlsx(list_1court,32,8)
+    add_list2d_to_xlsx(list_1court,41,8)
 
 
     '''
@@ -576,7 +576,7 @@ if __name__ == '__main__':
     list_1court.append(['赤羽，河岸C面'])
     list_1court.append(['','06:00~08:00','08:00~10:00','10:00~12:00','12:00~14:00','14:00~16:00','16:00~18:00'])
     get_1court()
-    add_list2d_to_xlsx(list_1court,32,16)
+    add_list2d_to_xlsx(list_1court,41,16)
 
 
     '''
@@ -600,7 +600,7 @@ if __name__ == '__main__':
     list_1court.append(['赤羽，河岸D面'])
     list_1court.append(['','06:00~08:00','08:00~10:00','10:00~12:00','12:00~14:00','14:00~16:00','16:00~18:00'])
     get_1court()
-    add_list2d_to_xlsx(list_1court,32,24)
+    add_list2d_to_xlsx(list_1court,41,24)
 
 
     '''
@@ -624,7 +624,7 @@ if __name__ == '__main__':
     list_1court.append(['赤羽，河岸E面'])
     list_1court.append(['','06:00~08:00','08:00~10:00','10:00~12:00','12:00~14:00','14:00~16:00','16:00~18:00'])
     get_1court()
-    add_list2d_to_xlsx(list_1court,32,32)
+    add_list2d_to_xlsx(list_1court,41,32)
 
 
 
@@ -687,7 +687,7 @@ if __name__ == '__main__':
     list_1court.append(['滝野川A面'])
     list_1court.append(['','06:00~08:00','08:00~10:00','10:00~12:00','12:00~14:00','14:00~16:00','16:00~18:00','18:30~20:30'])
     get_1court()
-    add_list2d_to_xlsx(list_1court,64,1)
+    add_list2d_to_xlsx(list_1court,81,1)
 
 
     '''
@@ -711,7 +711,7 @@ if __name__ == '__main__':
     list_1court.append(['滝野川B面'])
     list_1court.append(['','06:00~08:00','08:00~10:00','10:00~12:00','12:00~14:00','14:00~16:00','16:00~18:00','18:30~20:30'])
     get_1court()
-    add_list2d_to_xlsx(list_1court,64,9)
+    add_list2d_to_xlsx(list_1court,81,9)
 
 
     '''
@@ -735,5 +735,5 @@ if __name__ == '__main__':
     list_1court.append(['滝野川C面'])
     list_1court.append(['','06:00~08:00','08:00~10:00','10:00~12:00','12:00~14:00','14:00~16:00','16:00~18:00','18:30~20:30'])
     get_1court()
-    add_list2d_to_xlsx(list_1court,64,18)
+    add_list2d_to_xlsx(list_1court,81,18)
     

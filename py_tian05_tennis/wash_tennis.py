@@ -94,8 +94,10 @@ if __name__ == '__main__':
             for j in range(len(t_list2d[i])):
                 if 'O' in str(t_list2d[i][j]):
                     syukujitsu_tennis.append(t_list2d[i])
+                    break
                 elif '問' in str(t_list2d[i][j]):
                     syukujitsu_tennis.append(t_list2d[i])
+                    break
                 else:
                     pass
 
@@ -103,8 +105,10 @@ if __name__ == '__main__':
             for j in range(len(t_list2d[i])):
                 if 'O' in str(t_list2d[i][j]):
                     syukujitsu_tennis.append(t_list2d[i])
+                    break
                 elif '問' in str(t_list2d[i][j]):
                     syukujitsu_tennis.append(t_list2d[i])
+                    break
                 else:
                     pass
 
@@ -113,8 +117,10 @@ if __name__ == '__main__':
             for j in range(len(t_list2d[i])):
                 if 'O' in str(t_list2d[i][j]):
                     syukujitsu_tennis.append(t_list2d[i])
+                    break
                 elif '問' in str(t_list2d[i][j]):
                     syukujitsu_tennis.append(t_list2d[i])
+                    break
                 else:
                     pass           
 

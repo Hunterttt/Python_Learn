@@ -63,7 +63,7 @@ def list2d_to_xlsx(xlist2d):
     ws = wb.active
     for i in range(len(xlist2d)):
         ws.append(xlist2d[i])
-    wb.save('washed_tennis.xlsx')
+    wb.save('S_washed_tennis.xlsx')
 
 
 if __name__ == '__main__':
@@ -71,7 +71,7 @@ if __name__ == '__main__':
     print('今年の祝日,got from',sourse_html,'\n',syukujitsu_list)
 
 
-    t_list2d = excel_to_list2d('Tennis.xlsx',0)
+    t_list2d = excel_to_list2d('S_tennis.xlsx',0)
 
     #print(t_list2d[2][0])
     #print(type(t_list2d[2][0]))

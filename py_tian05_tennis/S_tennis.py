@@ -94,19 +94,38 @@ def xotext_to_xolist(xotext):
     xotext_tr = xotext_bs.find_all('tr')
 
     for i in range(1,len(xotext_tr)):
-        day_line = []
-        day_date = xotext_tr[i].find('strong').text
-        day_line.append(day_date)
+        day_line = []    #最终表格中一个场地中一行的数据
+       
+        try:
+        #在夏冬交替的时候，页面上的日期会出现空格
+            day_date = xotext_tr[i].find('strong').text
+        except:
+            day_date = "Placeholder"
+
+        #print(day_date)
+        day_line.append(day_date)    #最终表格中一个场地中一行的数据的开头是日期
 
         day_available = xotext_tr[i].find_all('td')
-        for day_interval in day_available:
-            #当可以在网上直接预约的时候，显示的不是img，而是支持input的按钮
+
+        #print(day_available)
+        for day_interval in day_available:    #如果day_available为空，就没法执行这个循环，直接跳过
+
             if day_interval.find('img'):
+            #当可以在网上直接预约的时候，显示的不是img，而是支持input的按钮
                 img_line = day_interval.find('img')
-            else:
+            elif day_interval.find('input'):
                 img_line = day_interval.find('input')
-            
-            alt = img_line.attrs.get('alt')
+            else:
+                img_line = ""     #这里必须给一个值，要不执行下面的语句的时候，img_line还是上一次循环的值
+                #print(img_line)
+
+
+            #在夏冬交替的时候，页面上的日期会出现空格
+            try:
+                alt = img_line.attrs.get('alt')
+            except:
+                #alt = "Placeholder"
+                alt = ""
             day_line.append(alt)
 
         #print(day_line)

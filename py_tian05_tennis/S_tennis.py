@@ -100,7 +100,8 @@ def xotext_to_xolist(xotext):
         #在夏冬交替的时候，页面上的日期会出现空格
             day_date = xotext_tr[i].find('strong').text
         except:
-            day_date = "Placeholder"
+            pass
+            #day_date = "Placeholder"       #这个地方很奇怪，可能只有在一个页面上出现冬夏相交的时候才需要把pass换成这个值
 
         #print(day_date)
         day_line.append(day_date)    #最终表格中一个场地中一行的数据的开头是日期

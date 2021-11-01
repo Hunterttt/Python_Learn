@@ -1,4 +1,5 @@
 #注意，这里的方法可能一段时间以后就不适用了，需要重新去网上搜索方法，这里用的是gmail
+#邮件只有文字
 import smtplib
 from email.mime.text import MIMEText
 

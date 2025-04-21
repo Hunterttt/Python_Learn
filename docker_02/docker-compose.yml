@@ -1,0 +1,33 @@
+version: '3.8'
+
+services:
+  backend:
+    build: ./backend
+    container_name: ecs-backend
+    ports:
+      - "3000:3000"
+#    healthcheck:
+#      test: ["CMD", "curl", "-f", "http://localhost:3000/api/hello"]
+#      interval: 10s
+#      timeout: 5s
+#      retries: 5
+    networks:
+      - app-network
+
+  frontend:
+    build: ./frontend
+    container_name: ecs-frontend
+    ports:
+      - "8080:80"
+    volumes:
+      - ./web-content:/usr/share/nginx/html:ro
+    depends_on:
+      - backend
+#      backend:
+#        condition: service_healthy  # 等待后端健康检查通过
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge

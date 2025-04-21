@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head><title>Flask API Demo</title></head>
+<body>
+  <h1>Hello world from Static HTML</h1>
+  <div id="output">Loading...</div>
+  <script>
+    fetch('/api/hello')
+      .then(response => response.json())
+      .then(data => {
+        document.getElementById('output').innerText = 'Backend says: ' + data.message;
+      })
+      .catch(err => {
+        document.getElementById('output').innerText = 'Error calling backend';
+        console.error(err);
+      });
+  </script>
+</body>
+</html>

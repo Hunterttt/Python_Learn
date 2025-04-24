@@ -1,0 +1,27 @@
+[ 浏览器 (localhost:8080) ]
+         |
+         | 1. 用户访问 http://localhost:8080/
+         v
+[ NGINX (frontend 容器) ]
+         |
+         | 2. 返回 index.html 静态页面
+         v
+[ 浏览器 (运行 HTML+JS) ]
+         |
+         | 3. JS 执行 fetch('/api/hello')
+         v
+[ NGINX (proxy_pass 到 backend) ]
+         |
+         | 4. 请求 /api/hello 被反向代理到 http://backend:3000/api/hello
+         v
+[ Flask 应用 (backend 容器) ]
+         |
+         | 5. Flask 返回 JSON 响应 {"message": "Hello world from Flask backend!"}
+         v
+[ NGINX 反向代理返回数据 ]
+         |
+         | 6. 浏览器 JS 接收到 JSON，写入 DOM
+         v
+[ 浏览器页面更新 ]
+显示：Hello from Static HTML  
+      Backend says: Hello world from Flask backend!

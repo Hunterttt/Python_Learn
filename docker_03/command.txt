@@ -1,0 +1,14 @@
+docker build -t 03backend .
+
+docker build -t 03frontend .
+
+docker network create -d bridge app-network
+
+docker run -dp 3000:3000 --name ecs-backend --network app-network 03backend
+
+docker run -dp 8080:80 \
+-e AWS_ACCESS_KEY_ID= \
+-e AWS_SECRET_ACCESS_KEY= \
+--name ecs-frontend \
+--network app-network \
+03frontend

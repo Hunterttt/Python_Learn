@@ -1,2 +1,1 @@
-#忽略这个主目录下的所有.env文件
-.env
+./Terraform_01/.terraform
